@@ -46,6 +46,7 @@ func feedJBBS2Twitter(board *jbbsreader.Board, api *anaconda.TwitterApi) error {
     log.Printf("Fetched %#v\n", resp)
     tweet, err := api.PostTweet(resp.Content, nil)
     if err != nil {
+      // TODO: Cancel FeedNewResponses
       return err
     }
     log.Printf("Sent tweet %#v\n", tweet)
