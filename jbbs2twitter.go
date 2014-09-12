@@ -21,9 +21,6 @@ var (
 
 func main() {
 	flag.Parse()
-
-	log.Printf("jbbsRPM: %v\n", *jbbsRPM)
-
 	log.Println("Generating Twitter Client")
 	anaconda.SetConsumerKey(*apiKey)
 	anaconda.SetConsumerSecret(*apiSecret)
